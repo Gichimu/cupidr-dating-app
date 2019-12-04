@@ -13,16 +13,22 @@
     <div class="navbar-collapse collapse kiki">
       <ul class="nav navbar-nav navbar-right">
 
-
+        {% if current_user.is_authenticated %}
+        <li><a class="btn btn-warning btn-outline" role="button"
+          style="font-family: 'Quicksand', sans-serif; height:40px; padding-top:10px;  color:#f0ad4e; font-size:16px;"
+          href="/">{{current_user.username}}</a></li>
         <li><a class="btn btn-warning btn-outline" role="button"
             style="font-family: 'Quicksand', sans-serif; height:40px; padding-top:10px; color:#f0ad4e; font-size:16px;"
             href="/">Profile</a></li>
         <li><a class="btn btn-warning btn-outline" role="button"
             style="font-family: 'Quicksand', sans-serif; height:40px; padding-top:10px;  color:#f0ad4e; font-size:16px;"
             href="{{url_for('auth.logout')}}">Sign out</a></li>
-
-        <li><a class="nav-link" href="{{url_for('auth.login')}}" style="color:black; font-weight:bolder;">Log in</a>
+        {% else %}
+        <li><a class="btn btn-warning btn-outline" role="button"
+          style="font-family: 'Quicksand', sans-serif; height:40px; padding-top:10px;  color:#f0ad4e; font-size:16px;"
+          href="{{url_for('auth.login')}}">Log in</a></li>    
         </li><br>
+        {% endif %}
       </ul>
     </div>
 
