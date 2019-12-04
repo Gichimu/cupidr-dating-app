@@ -1,5 +1,6 @@
 from flask import render_template,url_for
 from . import main
+from flask_login import login_required,current_user
 
 
 #display categories on the landing page
