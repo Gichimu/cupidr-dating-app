@@ -1,4 +1,3 @@
-virtual
-__pycache__
-.vscode
-instance
+virtual/
+*.pyc
+instance/

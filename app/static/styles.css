@@ -1,0 +1,69 @@
+.navbar{
+  background-color: #003459;
+}
+.kiki{
+  padding-right: 50px;
+}
+
+.kuku{
+  display: flex;
+  justify-content: center;
+}
+
+.brand{
+
+  padding-left: 100px;
+}
+body{
+  background-color: #FFFFFF;
+  /*background-image: url(https://image.freepik.com/free-vector/people-leaning-phone-while-chatting-concept-illustration_52683-23817.jpg);*/
+  /*background-size: cover;*/
+}
+
+.imageone{
+  height: 500px;
+  width: 626px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+/*Bootstrap button outline override*/
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+    margin: 10px;
+    height: 40px;
+
+}
+
+.btn-primary.btn-outline {
+    color: #428bca;
+}
+
+.btn-success.btn-outline {
+    color: #5cb85c;
+}
+
+.btn-info.btn-outline {
+    color: #5bc0de;
+}
+
+.btn-warning.btn-outline {
+    color: #f0ad4e;
+}
+
+.btn-danger.btn-outline {
+    color: #d9534f;
+}
+
+.btn-primary.btn-outline:hover,
+.btn-success.btn-outline:hover,
+.btn-info.btn-outline:hover,
+.btn-warning.btn-outline:hover,
+.btn-danger.btn-outline:hover {
+    color: #fff;
+}
