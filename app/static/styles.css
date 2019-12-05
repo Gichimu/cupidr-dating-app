@@ -1,10 +1,6 @@
-* {
-  box-sizing: border-box;
-}
+/* Landing page */
 
-.nav {
-  height: 70px;
-  width: 100%;
+.navbar{
   background-color: #003459;
   position: relative;
 }
@@ -159,4 +155,28 @@ body{
 .btn-warning.btn-outline:hover,
 .btn-danger.btn-outline:hover {
     color: black;
+}
+
+
+/* Profile */
+
+.profile {
+  margin: 0.5%;
+}
+
+
+
+.prof-right {
+  border-left: 1px solid #888888;
+}
+
+.update {
+  width: 100%;
+  margin-top: 5%;
+  left: 40%;
+}
+
+.update input {
+  width: 100%;
+  margin: 0 auto;
 }

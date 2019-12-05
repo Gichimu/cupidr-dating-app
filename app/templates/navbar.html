@@ -13,11 +13,13 @@
     </label>
   </div>
 
-  <div class="nav-links navbar-right">
-      <ul class="nav navbar-right">
-    {% if current_user.is_authenticated %}
-        <li><a class="btn btn-warning btn-outline" role="button" style="font-family: 'Quicksand', sans-serif; color:#f0ad4e; font-size:14px;" href="/">{{current_user.username}}'s Profile</a></li>
-        <li><a class="btn btn-warning btn-outline" role="button" style="font-family: 'Quicksand', sans-serif; color:#f0ad4e; font-size:14px;" href="{{url_for('auth.logout')}}">Sign out</a></li>
+        {% if current_user.is_authenticated %}
+        <li><a class="btn btn-warning btn-outline" role="button"
+          style="font-family: 'Quicksand', sans-serif;   color:#f0ad4e; font-size:14px;"
+          href="{{url_for('main.profile', uname=current_user.username)}}">{{current_user.username}}'s Profile</a></li>
+        <li><a class="btn btn-warning btn-outline" role="button"
+            style="font-family: 'Quicksand', sans-serif;   color:#f0ad4e; font-size:14px;"
+            href="{{url_for('auth.logout')}}">Sign out</a></li>
         {% else %}
         <li><a class="btn btn-warning btn-outline" role="button" style="font-family: 'Quicksand', sans-serif; color:#f0ad4e; font-size:14px;" href="{{url_for('auth.login')}}">Log in</a></li>
         {% endif %}
