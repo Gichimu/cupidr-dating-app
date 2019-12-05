@@ -1,11 +1,7 @@
 .navbar{
   background-color: #003459;
 }
-/*moves the navbar padding on the right
-.rightnav{
-  padding-right: 50px;
-}
-styles the signup button*/
+
 .signupbtn{
   display: flex;
   justify-content: center;
@@ -18,8 +14,7 @@ styles the signup button*/
 }
 body{
   background-color: #FFFFFF;
-  /*background-image: url(https://image.freepik.com/free-vector/people-leaning-phone-while-chatting-concept-illustration_52683-23817.jpg);*/
-  /*background-size: cover;*/
+
 }
 
 .imageone{
@@ -29,6 +24,14 @@ body{
   margin-left: auto;
   margin-right: auto;
 
+}
+.imagetwo{
+  padding-top: 250px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
