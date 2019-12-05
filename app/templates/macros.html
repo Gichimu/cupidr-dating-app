@@ -1,0 +1,12 @@
+{%macro displayMatchesFound(matches)%}
+    {%for match in matches%}
+        <div class="card">
+            <div class="card-body">
+                <p>{{match.username}}</p>
+            </div>
+        </div>
+        <div class="card-footer">
+
+        </div>
+    {%endfor%}
+{%endmacro%}

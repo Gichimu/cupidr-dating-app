@@ -69,3 +69,18 @@ body{
 .btn-danger.btn-outline:hover {
     color: #fff;
 }
+
+
+/* Profile */
+
+.profile {
+  margin: 0.5%;
+}
+
+.prof-left {
+
+}
+
+.prof-right {
+  border-left: 1px solid #888888;
+}
