@@ -3,7 +3,7 @@ from . import main
 from app import db
 from flask_login import login_required,current_user
 from .forms import updateForm
-from ..models import Quality
+from ..models import Quality, User
 
 
 #display categories on the landing page
@@ -14,13 +14,13 @@ def index():
     title = 'Home | cupidR'
     return render_template('index.html', title = title)
 
-@main.route('/profile')
-def profile():
+@main.route('/profile/<uname>')
+def profile(uname):
     """ View function that returns profile page """
-
+    user = User.query.filter_by(username=uname).first()
     return render_template('profile/profile.html')
 
-@main.route('/profile/<uname>/edit')
+@main.route('/profile/<uname>/edit', methods=['GET', 'POST'])
 def update(uname):
 
     form = updateForm()
@@ -30,5 +30,6 @@ def update(uname):
         db.session.commit()
         return redirect(url_for('main.profile', uname=uname))
 
-    return render_template('profile/update.html', uname=uname)
+    title = 'Update profile'
+    return render_template('profile/update.html',form=form, uname=uname, title=title)
 

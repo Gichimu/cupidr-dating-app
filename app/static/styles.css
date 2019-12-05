@@ -3,32 +3,37 @@
 .navbar{
   background-color: #003459;
 }
-.kiki{
-  padding-right: 50px;
-}
 
-.kuku{
+.signupbtn{
   display: flex;
   justify-content: center;
+  margin-left: 40%;
+  width: 20%;
 }
 
 .brand{
-
-  padding-left: 100px;
+  padding-left: 50px;
 }
 body{
   background-color: #FFFFFF;
-  /*background-image: url(https://image.freepik.com/free-vector/people-leaning-phone-while-chatting-concept-illustration_52683-23817.jpg);*/
-  /*background-size: cover;*/
+
 }
 
 .imageone{
-  height: 500px;
-  width: 626px;
+  height: auto;
+  max-width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
 
+}
+.imagetwo{
+  padding-top: 250px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -37,8 +42,8 @@ body{
     background-color: transparent;
     color: inherit;
     transition: all .5s;
-    margin: 10px;
-    height: 40px;
+    margin: 7px;
+    height: 35px;
 
 }
 
@@ -67,7 +72,7 @@ body{
 .btn-info.btn-outline:hover,
 .btn-warning.btn-outline:hover,
 .btn-danger.btn-outline:hover {
-    color: #fff;
+    color: black;
 }
 
 
@@ -77,10 +82,19 @@ body{
   margin: 0.5%;
 }
 
-.prof-left {
 
-}
 
 .prof-right {
   border-left: 1px solid #888888;
+}
+
+.update {
+  width: 100%;
+  margin-top: 5%;
+  left: 40%;
+}
+
+.update input {
+  width: 100%;
+  margin: 0 auto;
 }

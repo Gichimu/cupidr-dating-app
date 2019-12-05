@@ -1,32 +1,22 @@
 <div class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand brand" style="font-size: 60px; color: #FFFFFF; font-family: 'Poiret One', cursive;"
-        href="/"> cupidR. </a>
+      <a class="navbar-brand brand" style="font-size: 40px; color: #FFFFFF; font-family: 'Poiret One', cursive;"href="/"> cupidR. </a>
     </div>
-    <div class="navbar-collapse collapse kiki">
-      <ul class="nav navbar-nav navbar-right">
+    <div class="navbar-right">
+      <ul class="nav navbar-right">
 
         {% if current_user.is_authenticated %}
         <li><a class="btn btn-warning btn-outline" role="button"
-          style="font-family: 'Quicksand', sans-serif; height:40px; padding-top:10px;  color:#f0ad4e; font-size:16px;"
-          href="/">{{current_user.username}}</a></li>
+          style="font-family: 'Quicksand', sans-serif;   color:#f0ad4e; font-size:14px;"
+          href="{{url_for('main.profile', uname=current_user.username)}}">{{current_user.username}}'s Profile</a></li>
         <li><a class="btn btn-warning btn-outline" role="button"
-            style="font-family: 'Quicksand', sans-serif; height:40px; padding-top:10px; color:#f0ad4e; font-size:16px;"
-            href="/">Profile</a></li>
-        <li><a class="btn btn-warning btn-outline" role="button"
-            style="font-family: 'Quicksand', sans-serif; height:40px; padding-top:10px;  color:#f0ad4e; font-size:16px;"
+            style="font-family: 'Quicksand', sans-serif;   color:#f0ad4e; font-size:14px;"
             href="{{url_for('auth.logout')}}">Sign out</a></li>
         {% else %}
         <li><a class="btn btn-warning btn-outline" role="button"
-          style="font-family: 'Quicksand', sans-serif; height:40px; padding-top:10px;  color:#f0ad4e; font-size:16px;"
-          href="{{url_for('auth.login')}}">Log in</a></li>    
+          style="font-family: 'Quicksand', sans-serif;   color:#f0ad4e; font-size:14px;"
+          href="{{url_for('auth.login')}}">Log in</a></li>
         </li><br>
         {% endif %}
       </ul>
