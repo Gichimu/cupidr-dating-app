@@ -53,7 +53,7 @@ def find(uname):
     return render_template('profile/find.html', form=form, title=title)
 
 
-@main.route('/user/<uname>update/pic', methods=['POST'])
+@main.route('/user/<uname>/update_photo', methods=['POST'])
 @login_required
 def update_photo(uname):
     user = User.query.filter_by(username=uname).first()

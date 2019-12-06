@@ -11,10 +11,7 @@
                 {%else%}
                     <a href="/profile/{{current_user.username}}/update_photo"><img class="img-fluid prof-pic" src="https://p7.hiclipart.com/preview/980/304/8/computer-icons-user-profile-avatar.jpg" alt=""></a>
                 {%endif%}
-                <form action="{{url_for('main.update_photo',uname=users.username)}}" method="post" enctype="multipart/form-data">
-                    <input type="file" name="photo" class="form-control" required>
-                    <input type="submit">            
-                </form>
+            
                 <p class="">{{current_user.username}}</p>
                 <hr>
                 <a href="/profile/{{current_user.username}}/edit" class="btn btn-warning btn-outline nav-link" style="font-family: 'Quicksand', sans-serif;   color:#003459;"">Edit profile</a>
