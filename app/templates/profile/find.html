@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%import 'bootstrap/wtf.html' as wtf%}
+
+{%block content%}
+    <div class="container">
+        <div class="update">
+            <div class="row">
+                <div class="container text-center" style="color:#003459; font-family: 'Poiret One', cursive; padding-bottom:15px;"><h4>{{title}}</h4></div>
+            </div>
+            <div class="row">
+
+                <div class="container">{{wtf.quick_form(form)}}</div>
+            </div>
+        </div>
+    </div>
+{%endblock%}

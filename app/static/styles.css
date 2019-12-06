@@ -1,69 +1,88 @@
 .navbar{
   background-color: #003459;
 }
-.kiki{
-  padding-right: 50px;
-}
-
-.kuku{
-  display: flex;
-  justify-content: center;
+.nav-item {
+      padding-right: .5rem !important;
+      padding-left: .5rem !important;
 }
 
 .brand{
-
-  padding-left: 100px;
+  padding-left: 50px;
 }
 body{
   background-color: #FFFFFF;
-  /*background-image: url(https://image.freepik.com/free-vector/people-leaning-phone-while-chatting-concept-illustration_52683-23817.jpg);*/
-  /*background-size: cover;*/
+
 }
 
 .imageone{
-  height: 500px;
-  width: 626px;
+  height: auto;
+  max-width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
 
 }
-
-
-/*Bootstrap button outline override*/
-.btn-outline {
-    background-color: transparent;
-    color: inherit;
-    transition: all .5s;
-    margin: 10px;
-    height: 40px;
-
+.imagetwo{
+  padding-top: 250px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.btn-primary.btn-outline {
-    color: #428bca;
+
+/* Profile */
+
+.profile {
+  margin: 2%;
 }
 
-.btn-success.btn-outline {
-    color: #5cb85c;
+.prof-left {
+  padding-right: 20px;
 }
 
-.btn-info.btn-outline {
-    color: #5bc0de;
+.prof-left img {
+  padding-bottom: 20px;
 }
 
-.btn-warning.btn-outline {
-    color: #f0ad4e;
+.prof-right {
+  border-left: 1px solid #ebe8e8;
+  padding-left: 20px
 }
 
-.btn-danger.btn-outline {
-    color: #d9534f;
+.update {
+  width: 100%;
+  margin-top: 5%;
+  left: 40%;
 }
 
-.btn-primary.btn-outline:hover,
-.btn-success.btn-outline:hover,
-.btn-info.btn-outline:hover,
-.btn-warning.btn-outline:hover,
-.btn-danger.btn-outline:hover {
-    color: #fff;
+.update input {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card {
+  max-width: 270px;
+}
+
+.card-photo {
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.matches {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+@media screen and (min-width: 900px) {
+.examplea {
+    font-size: 80px;
+  }
+}
+@media screen and (min-width: 900px) {
+.exampleb {
+    font-size:20px;
+  }
 }

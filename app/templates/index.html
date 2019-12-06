@@ -2,16 +2,38 @@
 
 <!-- Content block -->
 {% block content %}
+{% if current_user.is_authenticated %}
+
+<div class="container" style="padding-top:100px;">
+  <div class="row">
+  <div class="col text-center">
+  <a class="btn btn-warning btn-outline nav-link" style="font-family: 'Quicksand', sans-serif;   color:#003459;" href="/profile/{{current_user.username}}">Go to {{current_user.username}}'s Profile</a>
+  <img class="img-fluid imageone" style="padding-top:20px;" src="{{url_for('static', filename='assets/images/img7.jpg')}}"></img>
+  </div>
+</div>
+</div>
+
+{% else %}
 <div class="container">
   <div class="col">
-    <div class="col-md">
-    <p class="text-center" style="color:#003459; font-size:70px; font-family: 'Abril Fatface', cursive;">Find Your SoulMate!</p>
-    <p class="text-center" style="color:#f0ad4e; font-family: 'Quicksand', sans-serif; font-size:25px;">Tired of being single? Looking for a SoulMate? Well, Say no More and Sign up Below! </p>
-    <a class="btn btn-warning kuku" role="button" style="font-family: 'Quicksand', sans-serif; height:40px; padding-top:10px; color:#003459; font-size:16px;" href="/">Sign Up Here</a>
+    <div class="col text-center">
+    <p class="text-center examplea" style="color:#003459; font-family: 'Abril Fatface', cursive;">Find Your <span style="color:#f0ad4e;">SoulMate!</span></p>
+    <p class="text-center exampleb" style="color:#f0ad4e; font-family: 'Quicksand', sans-serif;">Tired of being single? Looking for a SoulMate? Well, Say no More and Sign up Below! </p>
+    {% if current_user.is_authenticated %}
+
+    {% else %}
+    <div class="row">
+    <div class="col text-center">
+      <a class="btn btn-warning" role="button" style="font-family: 'Quicksand', sans-serif; color:#003459;" href="{{url_for('auth.register')}}">Sign Up</a>
+    </div>
+  </div>
+
+    {% endif %}
     </div>
     <div class="col-md">
-          <img class="imageone" src="static/assets/images/img3.jpg"></img>
+          <img class="img-fluid imageone" src="{{url_for('static', filename='assets/images/img3.jpg')}}"></img>
     </div>
 </div>
 </div>
+{% endif %}
 {% endblock%}
