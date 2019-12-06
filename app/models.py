@@ -16,6 +16,7 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80))
     email = db.Column(db.String(80), unique=True, index=True)
+    profile_pic_path = db.Column(db.String(255))
     qualities = db.relationship('Quality', backref='user', lazy = 'dynamic')
 
     password_secure = db.Column(db.String(255))

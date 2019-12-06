@@ -1,5 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import TextAreaField, TextField, IntegerField, SelectField, SubmitField, validators
+from wtforms import TextAreaField, TextField, IntegerField, SelectField, SubmitField, validators, FileField
+from flask_wtf.file import FileField, FileRequired
 from wtforms.validators import Required
 
 class updateForm(FlaskForm):
@@ -18,4 +19,8 @@ class findMatches(FlaskForm):
     height = SelectField('Height', choices=[('short', 'Short'), ('medium', 'Medium'), ('tall', 'Tall')])
     submit = SubmitField('Submit')
 
+
+class photoForm(FlaskForm):
+    photo = FileField(validators=[FileRequired()])
+    submit = SubmitField('Submit')
 
