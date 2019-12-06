@@ -1,96 +1,9 @@
-/* Landing page */
-
-.navbar{
-  background-color: #003459;
-  position: relative;
-}
-
-.nav > .nav-header {
-  display: inline;
-}
-
-.nav > .nav-header > .nav-title {
-  display: inline-block;
-  font-size: 22px;
-  color: #fff;
-  padding: 10px 10px 10px 10px;
-}
-
-.nav > .nav-btn {
-  display: none;
-}
-/*
-.nav > .nav-links {
-  display: inline;
-  float: right;
-  font-size: 18px;
-}
-*/
-
-.nav > .nav-links > a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.nav > #nav-check {
-  display: none;
-}
-
-@media (max-width:600px) {
-  .nav > .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-  }
-  .nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-  }
-  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #f0ad4e;
-  }
-  .nav > .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #003459;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
-    left: 0px;
-  }
-  .nav > .nav-links > a {
-    display: block;
-    width: 100%;
-  }
-  .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-  }
-  .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
-    overflow-y: auto;
-  }
-}
-
-/*
 .navbar{
   background-color: #003459;
 }
-*/
-.signupbtn{
-  display: flex;
-  justify-content: center;
-  margin-left: 40%;
-  width: 20%;
+.nav-item {
+      padding-right: .5rem !important;
+      padding-left: .5rem !important;
 }
 
 .brand{
@@ -119,45 +32,6 @@ body{
 }
 
 
-/*Bootstrap button outline override*/
-.btn-outline {
-    background-color: transparent;
-    color: inherit;
-    transition: all .5s;
-    margin: 7px;
-    height: 35px;
-
-}
-
-.btn-primary.btn-outline {
-    color: #428bca;
-}
-
-.btn-success.btn-outline {
-    color: #5cb85c;
-}
-
-.btn-info.btn-outline {
-    color: #5bc0de;
-}
-
-.btn-warning.btn-outline {
-    color: #f0ad4e;
-}
-
-.btn-danger.btn-outline {
-    color: #d9534f;
-}
-
-.btn-primary.btn-outline:hover,
-.btn-success.btn-outline:hover,
-.btn-info.btn-outline:hover,
-.btn-warning.btn-outline:hover,
-.btn-danger.btn-outline:hover {
-    color: black;
-}
-
-
 /* Profile */
 
 .profile {
@@ -179,4 +53,15 @@ body{
 .update input {
   width: 100%;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 900px) {
+.examplea {
+    font-size: 80px;
+  }
+}
+@media screen and (min-width: 900px) {
+.exampleb {
+    font-size:20px;
+  }
 }
