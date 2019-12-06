@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark">
-  <a class="navbar-brand" style="padding-left:20px; color: #FFFFFF; font-family: 'Poiret One', cursive;" href="#">cupidR</a>
+  <a class="navbar-brand" style="padding-left:20px; font-size:2em; color: #FFFFFF; font-family: 'Poiret One', cursive;" href="/">cupidR</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,7 +7,7 @@
     <ul class="navbar-nav ml-auto">
       {% if current_user.is_authenticated %}
       <li class="nav-item">
-        <a class="btn btn-warning btn-outline nav-link" style="font-family: 'Quicksand', sans-serif;   color:#003459;" href="#">{{current_user.username}}'s Profile</a>
+        <a class="btn btn-warning btn-outline nav-link" style="font-family: 'Quicksand', sans-serif;   color:#003459;" href="/profile/{{current_user.username}}">{{current_user.username}}'s Profile</a>
       </li>
       <li class="nav-item">
         <a class="btn btn-warning btn-outline nav-link" style="font-family: 'Quicksand', sans-serif;   color:#003459;" href="{{url_for('auth.logout')}}">Sign out</a>
