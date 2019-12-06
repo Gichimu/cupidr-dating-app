@@ -16,15 +16,19 @@ def index():
     title = 'Home | cupidR'
     return render_template('index.html', title = title)
 
-@main.route('/profile/<uname>')
+@main.route('/profile/<uname>', methods=['GET', 'POST'])
 def profile(uname):
     """ View function that returns profile page """
-    
+    users=None
+    form = findMatches()
     user = User.query.filter_by(username=uname).first()
+    if form.validate_on_submit():
+        matches = Quality.query.filter_by(gender=form.gender.data, complexion=form.complexion.data, personality=form.personality.data).all()
+        for match in matches:
+            users = User.query.filter_by(id=match.user_id).all()
+        # return redirect(url_for('main.profile', uname=uname, users=users))
     
-
-
-    return render_template('profile/profile.html')
+    return render_template('profile/profile.html', form=form, users=users)
 
 @main.route('/profile/<uname>/edit', methods=['GET', 'POST'])
 def update(uname):
@@ -44,15 +48,7 @@ def update(uname):
 @main.route('/profile/<uname>/find', methods=['GET', 'POST'])
 def find(uname):
 
-    form = findMatches()
-    user_set = []
-    if form.validate_on_submit():
-        qualities_sets = Quality.query.filter_by(gender=form.gender.data, complexion=form.complexion.data, personality=form.personality.data).all()
-        for qualities_set in qualities_sets:
-            users = User.query.filter_by(id=qualities_set.user_id).all()
-            user_set.append(users)
-        return redirect(url_for('main.profile', uname=uname, users=user_set))
-
+    
     title='Find matches'
     return render_template('profile/find.html', form=form, title=title)
 
