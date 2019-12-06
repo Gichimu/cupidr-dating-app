@@ -36,12 +36,33 @@ class User(UserMixin, db.Model):
 
 class Quality(db.Model):
     '''
-    Class that defines the user object template
+    Class that defines the qualities object template
     '''
     __tablename__='qualities'
     id = db.Column(db.Integer, primary_key=True)
     age = db.Column(db.Integer)
-    gender = db.Column(db.String(10))
-    complexion = db.Column(db.String(10))
+    gender = db.Column(db.String(50))
+    complexion = db.Column(db.String(50))
     personality = db.Column(db.String(50))
+    height = db.Column(db.String(50))
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+
+    def __repr__(self):
+        return f'Quality {self.age}'
+
+
+class Preference(db.Model):
+    '''
+    Class that defines the preferences object template
+    '''
+    __tablename__='preferences'
+    id = db.Column(db.Integer, primary_key=True)
+    age = db.Column(db.Integer)
+    gender = db.Column(db.String(50))
+    complexion = db.Column(db.String(50))
+    personality = db.Column(db.String(50))
+    height = db.Column(db.String(50))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+
+    def __repr__(self):
+        return f'Preference {self.age}'

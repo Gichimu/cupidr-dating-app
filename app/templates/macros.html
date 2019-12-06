@@ -1,12 +1,13 @@
-{%macro displayMatchesFound(matches)%}
-    {%for match in matches%}
+{%macro displayMatchesFound(users)%}
+    {%for user in users%}
         <div class="card">
             <div class="card-body">
-                <p>{{match.username}}</p>
+                <img class="card-photo" src="https://huntpng.com/images250/avatar-png-icon-3.png" alt="">
+            </div>
+            <div class="card-footer">
+                <p>{{user.username}}</p>
             </div>
         </div>
-        <div class="card-footer">
-
-        </div>
+        
     {%endfor%}
 {%endmacro%}

@@ -79,13 +79,20 @@ body{
 /* Profile */
 
 .profile {
-  margin: 0.5%;
+  margin: 2%;
 }
 
+.prof-left {
+  padding-right: 20px;
+}
 
+.prof-left img {
+  padding-bottom: 20px;
+}
 
 .prof-right {
-  border-left: 1px solid #888888;
+  border-left: 1px solid #ebe8e8;
+  padding-left: 20px
 }
 
 .update {
@@ -97,4 +104,19 @@ body{
 .update input {
   width: 100%;
   margin: 0 auto;
+}
+
+.card {
+  max-width: 270px;
+}
+
+.card-photo {
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.matches {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }

@@ -11,11 +11,12 @@
                 <hr>
                 <a href="/profile/{{current_user.username}}/edit" class="btn btn-outline-warning">Edit profile</a>
             </div>
-            <div class="col-md-9 prof-right">
-                {%if matches%}
-                    {{macro.displayMatchesFound(matches)}}
+            <div class="col-md-9 prof-right text-center">
+                {%if users%}
+                    <div class="matches">{{macro.displayMatchesFound(users)}}</div>
                 {%else%}
-                    <a href="" class="btn btn-outline-warning">Find matches</a>
+                    <p>{{text}}</p>
+                    <a href="/profile/{{current_user.username}}/find" class="btn btn-outline-warning">Find matches</a>
                 {%endif%}
             </div>
         </div>
