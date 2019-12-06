@@ -13,15 +13,17 @@
                 {%endif%}
                 <p class="">{{current_user.username}}</p>
                 <hr>
-                <a href="/profile/{{current_user.username}}/edit" class="btn btn-outline-warning">Edit profile</a>
-            </div>
-            <div class="col-md-9 prof-right text-center">
+                <a href="/profile/{{current_user.username}}/edit" class="btn btn-warning btn-outline nav-link" style="font-family: 'Quicksand', sans-serif;   color:#003459;"">Edit profile</a>
+
                 {%if users%}
                     <div class="matches">{{macro.displayMatchesFound(users)}}</div>
                 {%else%}
                     <p>{{text}}</p>
-                    <a href="/profile/{{current_user.username}}/find" class="btn btn-outline-warning">Find matches</a>
+                    <hr>
+                    <a href="/profile/{{current_user.username}}/find" class="btn btn-warning btn-outline nav-link" style="font-family: 'Quicksand', sans-serif;   color:#003459;">Find matches</a>
                 {%endif%}
+
+
             </div>
         </div>
     </div>
