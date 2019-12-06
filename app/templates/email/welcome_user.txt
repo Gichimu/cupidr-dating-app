@@ -1,0 +1,4 @@
+Hello {{user.username}},
+Welcome to cupidR Dating App
+We have just seen you have signed up for our app and want to welcome you to your Oh La Love finding journey.
+GoodLuck !! You got this !
