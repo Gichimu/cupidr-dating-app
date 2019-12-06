@@ -1,5 +1,9 @@
 virtual/
 *.pyc
 instance/
+<<<<<<< HEAD
+vscode/
+=======
 .vscode/
 __pycache__
+>>>>>>> 493f2f2d2392d1b5effc00d1520899b21e17024c
